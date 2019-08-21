@@ -17,7 +17,7 @@ class SessionController {
       res.status(400).json({ error: 'Password does not match' });
     }
 
-    const { id, name } = req.body;
+    const { id, name } = user;
     res.json({
       user: {
         id,

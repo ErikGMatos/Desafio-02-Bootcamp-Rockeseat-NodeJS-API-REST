@@ -6,7 +6,9 @@
   "author": "Erik Garces Matos <erik_senac@hotmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/server.js",
+    "debug": "node --inspect -r sucrase/register src/server.js",
+    "db:clear": "sequelize db:migrate:undo:all && sequelize db:migrate"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
